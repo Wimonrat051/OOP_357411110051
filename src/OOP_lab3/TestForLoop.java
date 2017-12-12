@@ -13,7 +13,7 @@ public class TestForLoop {
 //                System.out.print(i + " ");
 //        }
         for (int i=1; i<=100; i++) {
-            if(i%3==0 && i%5==0)
+            if(i%3==0 && i%5==0) //แสดงเลขที่หารด้วย 3 และ 5 ลงตัว
                 System.out.print(i + " ");
         }
     }
