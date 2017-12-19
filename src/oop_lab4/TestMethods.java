@@ -2,8 +2,8 @@ package oop_lab4;
 
 public class TestMethods {
     //global variable
-}
-    public static void main(String[] args) {
+    public static  int number = 1000;
+
         //Method
         // type 1
         public static void A () {
@@ -18,7 +18,7 @@ public class TestMethods {
 
         //type 3
         public static int C (int x,int y){
-            System.out.println("Hello C");
+            System.out.println("Hello C"+1000);
 
             return x+y;
         }
@@ -32,10 +32,10 @@ public class TestMethods {
         //A();
         //B(10);
        int number = C(10,20);
-       System.out.println();(number);
+       System.out.println(number);
        System.out.println(C(50,50));
             //local variable
-            int
+            int x = 1000;
 }
 
     }
