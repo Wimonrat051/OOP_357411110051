@@ -2,8 +2,7 @@ package Midterm;
 
 import java.util.Scanner;
 
-public class Employee {
-    static Scanner scanner = new Scanner(System.in);
+public class Test {
     public static void main(String[] args) {
         String getName;
         int getID;
@@ -54,7 +53,5 @@ public class Employee {
             System.out.println("\nเงินเดือนสุทธิ: "+ net);
             System.out.println("\nภาษีที่ต้องเสีย:" +net*1/100);
         }
-
     }
-
 }
