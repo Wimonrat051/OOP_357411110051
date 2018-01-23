@@ -8,7 +8,7 @@ public class mySuperCar {
         SuperCar1.setBrand("Honda");
         SuperCar1.setColor("Rad");
         SuperCar1.setEngineSize("125");
-        SuperCar1.setMaxSpeed("100");
+        SuperCar1.setMaxSpeed("90");
         SuperCar1.setCountry("Japan");
         System.out.println(SuperCar1.toString());
 
