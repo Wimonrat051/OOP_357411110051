@@ -1,42 +1,36 @@
 package oop_lab7;
+import java.util.ArrayList;
 import java.util.Scanner;
+
+
 
 public class mySuperCar {
     public static void main(String[] args) {
-        SuperCar SuperCar1 = new SuperCar(); //ออฟเจ็คของคลาสstudent
-
-        SuperCar1.setBrand("Honda");
-        SuperCar1.setColor("Rad");
-        SuperCar1.setEngineSize("125");
-        SuperCar1.setMaxSpeed("90");
-        SuperCar1.setCountry("Japan");
-        System.out.println(SuperCar1.toString());
-
-        SuperCar superCar2 = new SuperCar("toyota","red","160","200","japan");
-        System.out.println(superCar2.toString());
-
-        SuperCar SuperCar2 = new SuperCar();
-        SuperCar2 = inputData(SuperCar2);
-        System.out.println(SuperCar2.toString());
-    }//main
-
-
-    private static SuperCar inputData(SuperCar  s) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter Car Brand : ");
-        s.setBrand(scanner.nextLine());
-        System.out.print("Enter Car Color : ");
-        s.setColor(scanner.nextLine());
-        System.out.print("Enter Engine Size : ");
-        s.setEngineSize(scanner.nextLine());
-        System.out.print("Enter MaxSpeed : ");
-        s.setMaxSpeed(scanner.nextLine());
-        System.out.print("Enter Country of origin : ");
-        s.setCountry(scanner.nextLine());
-        return (s);
-
-
+        ArrayList<SuperCar> myCarList = new ArrayList<SuperCar>();
+        myCarList = inputData(myCarList);
+        System.out.println("== Show Super Car Info ==");
+        for (int i=0;i<myCarList.size();i++){
+            System.out.println(myCarList.get(i).getSuperCarInfo());
+        }
     }
+    private static ArrayList inputData(ArrayList myCarList) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please insert super car info: ");
+        for (int i =0;i<10;i++){
+            System.out.println("Super car: "+(i+1));
+            System.out.print("Brand: ");
+            String b = scanner.nextLine();
+            System.out.print("Color: ");
+            String c = scanner.nextLine();
+            System.out.print("Engine Size: ");
+            String e = scanner.nextLine();
+            SuperCar car  = new SuperCar(b,c,e);
+            myCarList.add(car);
+        }
+        return myCarList;
+    }
+
+
+
 
 }//class
