@@ -8,6 +8,9 @@ public abstract class Pet {
         this.name = name;
         this.age = age;
     }
+    protected void myPet(){ //เเฉพาะ subclass หรือคลาสลูกที่มองเห็น
+        System.out.println(this.name);
+    }
     //Abstract Method
     public abstract void makeNoise();
 
